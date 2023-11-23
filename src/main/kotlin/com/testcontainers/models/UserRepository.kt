@@ -6,4 +6,7 @@ import org.springframework.data.jpa.repository.Query
 interface UserRepository : JpaRepository<User, String> {
     @Query(value = "SELECT * FROM users WHERE email = :email", nativeQuery = true)
     fun findByEmail(email: String): List<User>
+
+    @Query(value = "SELECT * FROM users WHERE role = :role", nativeQuery = true)
+    fun findByRole(role: String): List<User>
 }
