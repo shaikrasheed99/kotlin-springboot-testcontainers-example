@@ -59,4 +59,18 @@ class UserRepositoryIntegrationTestWithTestContainers {
 
         Assertions.assertEquals(users.size, 0)
     }
+
+    @Test
+    internal fun shouldBeAbleToReturnUsersByRole() {
+        val users = userRepository.findByRole("user")
+
+        Assertions.assertEquals(users.size, 1)
+    }
+
+    @Test
+    internal fun shouldBeAbleToReturnEmptyListOfUsersWhenRoleIsNotFound() {
+        val users = userRepository.findByEmail("test")
+
+        Assertions.assertEquals(users.size, 0)
+    }
 }
