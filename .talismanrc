@@ -3,4 +3,6 @@ fileignoreconfig:
   checksum: 4c46bd44204ab4abe7ccfe11550e42cfc36ca5ac7431097858abaf2b1f8b561e
 - filename: src/main/resources/users-table-db-init.sql
   checksum: 71d339a88d9e71fe61be9f454946f08f88de2c59fbf79f74c26c03aa65331533
+- filename: src/test/kotlin/com/testcontainers/models/UserRepositoryIntegrationTestWithTestContainers.kt
+  checksum: c7a29a0f131108ba4d671fa56908978161fec43378c7b723f98c84154a0639c8
 version: ""
